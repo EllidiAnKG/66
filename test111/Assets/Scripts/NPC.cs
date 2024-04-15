@@ -9,9 +9,9 @@ public class NPC : MonoBehaviour
 
     private bool isPlayerNearby = false;
 
-    private void OnCollisionEnter(Collision collision)
+  private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.tag == "Player")
         {
             Debug.Log("enter");
             isPlayerNearby = true;
